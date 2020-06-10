@@ -1,0 +1,10 @@
+{
+    "app": "import:./app",
+    "something_else": "config:app.base_url",
+    "ssl": {
+        "certificate": "file:./certificates/server.crt",
+        "certificate_path": "path:./certificates/server.crt"
+    },
+    "email": "require:./email",
+    "images": "glob:../public/images/**/*.jpg"
+}

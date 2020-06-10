@@ -1,0 +1,31 @@
+{
+    "middleware": {
+        "morgan": {
+            "enabled": true,
+            "priority": 10,
+            "module": {
+                "name": "morgan",
+                "arguments": ["combined"]
+            }
+        },
+        "cookieParser": {
+            "enabled": true,
+            "priority": 20,
+            "module": {
+                "name": "cookie-parser"
+            }
+        },
+        "rateLimit": {
+            "enabled": true,
+            "priority": 30,
+            "module": {
+                "name": "ratelimit-middleware",
+                "arguments": [{
+                    "burst": 10,
+                    "rate": 0.5,
+                    "ip": true
+                }]
+            }
+        }
+    }
+}

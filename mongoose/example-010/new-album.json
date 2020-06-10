@@ -1,0 +1,45 @@
+{
+  "composer": "Aphelion",
+  "title": "Memento",
+  "price": 5.99,
+  "inPublication": true,
+  "genre": ["Dance", "Electronic"],
+  "tracks": [
+    {
+      "title": "Omnipresent",
+      "duration": {"m": 5, "s": 51}
+    },
+    {
+      "title": "When, Where, Why",
+      "duration": {"m": 6, "s": 44}
+    },
+    {
+      "title": "Esq",
+      "duration": {"m": 5, "s": 50}
+    },
+    {
+      "title": "An Old Friend",
+      "duration": {"m": 8, "s": 0}
+    },
+    {
+      "title": "Slow Burn",
+      "duration": {"m": 6, "s": 36}
+    },
+    {
+      "title": "Ifreann",
+      "duration": {"m": 4, "s": 40}
+    },
+    {
+      "title": "Cosmos",
+      "duration": {"m": 5, "s": 56}
+    },
+    {
+      "title": "You Are but a Memory",
+      "duration": {"m": 9, "s": 13}
+    },
+    {
+      "title": "Mountains",
+      "duration": {"m": 6, "s": 24}
+    }
+  ]
+}

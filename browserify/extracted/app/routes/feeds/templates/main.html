@@ -1,0 +1,28 @@
+<div class="row">
+
+    <div class="col-xs-4">
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Feeds</h3>
+            </div>
+            <div class="list-group">
+                <a ng-repeat="feed in feeds" class="list-group-item" ng-class="{ 'active': selectedFeed.id === feed.id }" ng-bind="feed.name" ng-click="select(feed)"></a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="col-xs-8">
+
+        <div class="panel panel-default feed-article" ng-repeat="article in articles">
+            <div class="panel-heading">
+                <h3 class="panel-title" ng-bind="article.title"></h3>
+            </div>
+            <div class="panel-body" ng-bind-html="article.content">
+            </div>
+        </div>
+
+    </div>
+
+</div>

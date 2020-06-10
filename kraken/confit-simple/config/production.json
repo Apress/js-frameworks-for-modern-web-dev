@@ -1,0 +1,16 @@
+{
+    "database": {
+        "postgresql": {
+            "hostname": "db.myapp.com",
+            "username": "postgres",
+            "password": "super-secret-password",
+            "database": "myapp"
+        }
+    },
+    "cache": {
+        "redis": {
+            "hostname": "redis.myapp.com",
+            "password": "redis"
+        }
+    }
+}

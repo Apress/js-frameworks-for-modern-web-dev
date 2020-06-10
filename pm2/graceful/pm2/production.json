@@ -1,0 +1,15 @@
+{
+    "name": "graceful",
+    "cwd": "/Users/tim/repos/pro-javascript-frameworks/code/pm2/graceful",
+    "max_memory_restart": "60M",
+    "watch": false,
+    "script": "index.js",
+    "instances": 0, // max
+    "exec_mode": "cluster",
+    "autorestart": true,
+    "merge_logs": false,
+    "env": {
+        "port": 9000,
+        "PM2_GRACEFUL_TIMEOUT": 10000
+    }
+}

@@ -1,0 +1,36 @@
+@import '//fonts.googleapis.com/css?family=Open+Sans';
+
+body {
+    font-family: 'Open Sans';
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table tr th {
+    background-color: #f7f7f9;
+    width: 25%;
+}
+
+table tr td, table tr th {
+    border: 1px solid #e1e1e8;
+    text-align: left;
+    padding: 4px;
+}
+
+.person {
+    margin: 15px 0 15px 0;
+    width: 100%;
+    max-width: 700px;
+    padding: 15px;
+    border: 1px solid #e1e1e8;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.person p:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}

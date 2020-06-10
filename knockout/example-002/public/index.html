@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Omnom Recipes</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link type="text/css" rel="stylesheet" href="/styles/font-awesome.min.css" />
+    <link type="text/css" rel="stylesheet" href="/styles/app.css" />
+  </head>
+  <body>
+
+    <header>
+      <h1>Omnom Recipes</h1>
+      <span class="happeh-left">(❀◦‿◦)</span>
+      <span class="happeh-right">(◕‿◕✿)</span>
+    </header>
+
+    <section class="content">
+      <nav id="recipe-list">
+        <!-- context: viewmodel -->
+        <!-- $parent === undefined -->
+        <!-- $data === viewmodel -->
+        <ul data-bind="foreach: recipes">
+          <!-- context: recipe -->
+          <!-- $parent === viewmodel -->
+          <!-- $data === recipe -->
+          <li data-bind="text: title,
+            click: $parent.selectRecipe,
+            css: {selected: $parent.isSelected($data)}"></li>
+        </ul>
+      </nav>
+
+      <section id="recipe-details">
+        <form>
+          <div>
+            <!-- in read-only view -->
+            <button data-bind="click: edit, visible: !isEditing()">Edit</button>
+            <!-- in edit view -->
+            <button data-bind="click: save, visible: isEditing">Save</button>
+            <button data-bind="click: cancelEdit, visible: isEditing">Cancel</button>
+          </div>
+
+          <h1 data-bind="text: title"></h1>
+          <!-- in edit view -->
+          <div data-bind="visible: isEditing" class="edit-field">
+            <label for="recipe-title">Title:</label>
+            <input data-bind="value: title" name="title" id="recipe-title" type="text" />
+          </div>
+
+          <h2>Details</h2>
+          <!-- in read-only view -->
+          <p data-bind="visible: !isEditing()">
+            Servings: <span data-bind="text: servings"></span>
+          </p>
+          <!-- in edit view -->
+          <div data-bind="visible: isEditing" class="edit-field">
+            <label for="recipe-servings">Servings:</label>
+            <select data-bind="options: servingSizes,
+                    optionsText: 'text',
+                    optionsValue: 'numeral',
+                    value: servings,
+                    optionsCaption: 'Choose...'"
+                    name="recipeServings"
+                    id="recipe-servings">
+            </select>
+          </div>
+
+          <!-- in read-only view -->
+          <p data-bind="visible: !isEditing()">
+            Approximate Cook Time: <span data-bind="text: cookingTime"></span>
+          </p>
+          <!-- in edit view -->
+          <div data-bind="visible: isEditing" class="edit-field">
+            <label for="recipe-hours">Approximate Cook Time:</label>
+            <input data-bind="value: hours"
+                   name="hours"
+                   id="recipe-hours"
+                   type="number" />
+            <input data-bind="value: minutes"
+                   name="minutes"
+                   id="recipe-minutes"
+                   type="number" />
+          </div>
+
+          <h2>Ingredients</h2>
+          <!-- in read-only view -->
+          <ul data-bind="foreach: ingredients, visible: !isEditing()">
+            <li data-bind="text: $data"></li>
+          </ul>
+          <!-- in edit view -->
+          <div data-bind="visible: isEditing" class="edit-field">
+            <!-- existing ingredients -->
+            <ul data-bind="foreach: ingredients" class="listless">
+              <li>
+                <input data-bind="value: $data,
+                       valueUpdate: 'input',
+                       attr: {name: 'ingredient-' + $index()},
+                       event: {input: $parent.changeIngredient.bind($parent, $index())}"
+                       type="text" />
+                <button data-bind="click: $parent.removeIngredient.bind($parent, $index())"
+                        class="fa fa-minus"></button>
+              </li>
+            </ul>
+            <!-- new ingredient -->
+            <input data-bind="value: newIngredient"
+                   type="text"
+                   name="new-ingredient"
+                   id="recipe-new-ingredient"/>
+            <button data-bind="click: commitNewIngredient"
+                    class="fa fa-plus"></button>
+          </div>
+
+          <h2>Instructions</h2>
+          <!-- in read-only view -->
+          <ol data-bind="foreach: instructions, visible: !isEditing()">
+            <li data-bind="text: $data"></li>
+          </ol>
+          <!-- in edit view -->
+          <div data-bind="visible: isEditing" class="edit-field">
+            <!-- existing instructions -->
+            <ul data-bind="foreach: instructions" class="listless">
+              <li>
+                <input data-bind="value: $data,
+                       valueUpdate: 'input',
+                       attr: {name: 'instruction-' + $index()},
+                       event: {input: $parent.changeInstruction.bind($parent, $index())}"
+                       type="text" />
+                <button data-bind="click: $parent.demoteInstruction.bind($parent, $index())"
+                        class="fa fa-caret-down"></button>
+                <button data-bind="click: $parent.promoteInstruction.bind($parent, $index())"
+                        class="fa fa-caret-up"></button>
+                <button data-bind="click: $parent.removeInstruction.bind($parent, $index())"
+                        class="fa fa-minus"></button>
+              </li>
+            </ul>
+            <!-- new instruction -->
+            <input data-bind="value: newInstruction"
+                   type="text"
+                   name="new-instruction"
+                   id="recipe-new-instruction" />
+            <button data-bind="click: commitNewInstruction"
+                    class="fa fa-plus"></button>
+          </div>
+
+          <!-- in read-only view -->
+          <a data-bind="visible: hasCitation() && !isEditing(),
+            attr: {href: citation, title: title}"
+            target="_blank">Source</a>
+          <!-- in edit view -->
+          <div data-bind="visible: isEditing" class="edit-field">
+            <label>Citation:</label>
+            <input name="citation" type="text" data-bind="value: citation" />
+          </div>
+
+          <div>
+            <!-- in read-only view -->
+            <button data-bind="click: edit, visible: !isEditing()">Edit</button>
+            <!-- in edit view -->
+            <button data-bind="click: save, visible: isEditing">Save</button>
+            <button data-bind="click: cancelEdit, visible: isEditing">Cancel</button>
+          </div>
+        </form>
+      </section>
+    </section>
+
+    <footer>
+      <p class="attribution">
+        Font Awesome by Dave Gandy - <a href="http://fontawesome.io">http://fontawesome.io</a>
+      </p>
+    </footer>
+
+    <script src="/scripts/vendor/jquery-2.1.3.min.js"></script>
+    <script src="/scripts/vendor/knockout-3.3.0.js"></script>
+    <script src="/scripts/vendor/knockout.mapping-latest.js"></script>
+    <script src="/scripts/recipe-list.js"></script>
+    <script src="/scripts/recipe-details.js"></script>
+    <script src="/scripts/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+[
+  {
+    "composer": "Kerry Muzzey",
+    "title": "Renaissance",
+    "price": 4.95,
+    "releaseDate": "2014-01-13T06:00:00.000Z",
+    "inPublication": true,
+    "genre": ["Classical", "Trailer Music", "Soundtrack"],
+    "tracks": [
+    ]
+  },
+  {
+    "composer": "Audiomachine",
+    "title": "Tree of Life",
+    "price": 9.49,
+    "releaseDate": "2013-07-16T05:00:00.000Z",
+    "inPublication": true,
+    "genre": ["Classical", "Trailer Music"],
+    "tracks": [
+    ]
+  },
+  {
+    "composer": "Jessica Curry",
+    "title": "Dear Esther",
+    "price": 6.99,
+    "releaseDate": "2012-02-14T06:00:00.000Z",
+    "inPublication": true,
+    "genre": ["Classical", "Video Game Soundtrack"],
+    "tracks": [
+    ]
+  }
+]

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="UTF-8">
+    <title>example-025/index.html</title>
+    <script src="../node_modules/underscore/underscore.js"></script>
+  </head>
+  <body>
+
+    <div id="output"></div>
+
+    <script>
+    (function (_) {
+      var markup =
+        '<%- movie.voted %> out of <%- movie.total %> stars!' +
+        '<% if (movie.percent) { %>' +
+        ' (<%- movie.percent %>%)' +
+        '<% } else { %>' +
+        ' (<% print((movie.voted / movie.total * 100).toFixed(0)) %>%)' +
+        '<% } %>';
+
+      var settings = {variable: 'movie'};
+      // settings is the *third* parameter
+      var compiledTemplate = _.template(markup, null, settings);
+
+      var rendered = compiledTemplate({
+        voted: 4, total: 5, percent: 80.1
+      });
+
+      document.querySelector('#output').innerHTML = rendered;
+
+    }(window._));
+    </script>
+
+  </body>
+</html>

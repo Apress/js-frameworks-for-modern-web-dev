@@ -1,0 +1,31 @@
+{>"layouts/master" /}
+
+{<body}
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">{@pre type="content" key="greeting" /} Feed Reader, {user.first_name}.</h3>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Feed</th>
+                    <th>Article</th>
+                    <th>Author</th>
+                    <th>Published</th>
+                </tr>
+            </thead>
+            <tbody>
+                {#articles}
+                    <tr>
+                        <td>{feed.name}</td>
+                        <td><a href="{link|s}" target="_article">{title}</a></td>
+                        <td>{author}</td>
+                        <td>{published}</td>
+                    </tr>
+                {/articles}
+            </tbody>
+        </table>
+    </div>
+
+{/body}

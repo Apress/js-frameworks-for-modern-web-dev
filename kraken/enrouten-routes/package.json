@@ -1,0 +1,31 @@
+{
+  "name": "enrouten-routes",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test",
+    "start": "node index"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^1.0.0",
+    "bcrypt": "^0.8.3",
+    "bluebird": "~2.9.24",
+    "body-parser": "~1.12.3",
+    "bookshelf": "~0.7.9",
+    "confit": "~2.0.3",
+    "express": "~4.12.3",
+    "express-enrouten": "~1.2.0",
+    "knex": "~0.7.6",
+    "lodash": "~3.7.0",
+    "meddleware": "~3.0.1",
+    "morgan": "~1.5.2",
+    "prettyjson": "^1.1.2",
+    "request": "^2.56.0",
+    "request-promise": "^0.4.2",
+    "shortstop-handlers": "~1.0.0",
+    "sqlite3": "~3.0.5"
+  }
+}

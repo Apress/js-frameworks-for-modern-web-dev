@@ -1,0 +1,15 @@
+{
+    // SMTP server settings
+    "email": {
+        "hostname": "email.mydomain.com",
+        "username": "user",
+        "password": "pass",
+        "from": "My Application <noreply@myapp.com>"
+    },
+    "cache": {
+        "redis": {
+            "hostname": "cache.mydomain.com",
+            "password": "redis"
+        }
+    }
+}

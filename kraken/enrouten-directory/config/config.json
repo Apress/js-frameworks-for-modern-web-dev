@@ -1,0 +1,16 @@
+{
+    "middleware": {
+        "enrouten": {
+            "enabled": true,
+            "priority": 10,
+            "module": {
+                "name": "express-enrouten",
+                "arguments": [
+                    {
+                        "directory": "path:../routes"
+                    }
+                ]
+            }
+        }
+    }
+}

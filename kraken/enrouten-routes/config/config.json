@@ -1,0 +1,111 @@
+{
+    "middleware": {
+        "morgan": {
+            "enabled": true,
+            "priority": 10,
+            "module": {
+                "name": "morgan",
+                "arguments": ["combined"]
+            }
+        },
+        "enrouten": {
+            "enabled": true,
+            "priority": 30,
+            "module": {
+                "name": "express-enrouten",
+                "arguments": [
+                    {
+                        "index": "path:../routes",
+                        "routes": [
+                            {
+                                "path": "/api/v1/session",
+                                "method": "POST",
+                                "handler": "require:../routes/api/v1/session/create"
+                            },
+                            {
+                                "path": "/api/v1/session",
+                                "method": "DELETE",
+                                "handler": "require:../routes/api/v1/session/delete",
+                                "middleware": [
+                                    "require:../middleware/auth"
+                                ]
+                            },
+                            {
+                                "path": "/api/v1/users",
+                                "method": "GET",
+                                "handler": "require:../routes/api/v1/users/list",
+                                "middleware": [
+                                    "require:../middleware/auth"
+                                ]
+                            },
+                            {
+                                "path": "/api/v1/users",
+                                "method": "POST",
+                                "handler": "require:../routes/api/v1/users/create",
+                                "middleware": [
+                                    "require:../middleware/auth"
+                                ]
+                            },
+                            {
+                                "path": "/api/v1/users/:user_id",
+                                "method": "GET",
+                                "handler": "require:../routes/api/v1/users/get",
+                                "middleware": [
+                                    "require:../middleware/auth"
+                                ]
+                            },
+                            {
+                                "path": "/api/v1/accounts",
+                                "method": "GET",
+                                "handler": "require:../routes/api/v1/accounts/list",
+                                "middleware": [
+                                    "require:../middleware/auth"
+                                ]
+                            },
+                            {
+                                "path": "/api/v1/accounts",
+                                "method": "POST",
+                                "handler": "require:../routes/api/v1/accounts/create",
+                                "middleware": [
+                                    "require:../middleware/auth"
+                                ]
+                            },
+                            {
+                                "path": "/api/v1/accounts/:account_id",
+                                "method": "GET",
+                                "handler": "require:../routes/api/v1/accounts/get",
+                                "middleware": [
+                                    "require:../middleware/auth"
+                                ]
+                            },
+                            {
+                                "path": "/api/v1/profiles",
+                                "method": "GET",
+                                "handler": "require:../routes/api/v1/profiles/list",
+                                "middleware": [
+                                    "require:../middleware/auth"
+                                ]
+                            },
+                            {
+                                "path": "/api/v1/profiles",
+                                "method": "POST",
+                                "handler": "require:../routes/api/v1/profiles/create",
+                                "middleware": [
+                                    "require:../middleware/auth"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "bodyParser": {
+            "enabled": true,
+            "priority": 20,
+            "module": {
+                "name": "body-parser",
+                "method": "json"
+            }
+        }
+    }
+}

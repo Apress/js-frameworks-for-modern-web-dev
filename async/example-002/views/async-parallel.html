@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="UTF-8">
+    <title>example-002/async-parallel</title>
+    <script src="/scripts/jquery.js"></script>
+    <script src="/scripts/async.js"></script>
+  </head>
+  <body>
+
+    <h1>User Profile</h1>
+    <form>
+      <fieldset>
+        <div>
+          <label>First Name</label>
+          <input type="text" id="first-name" />
+        </div>
+        <div>
+          <label>US States</label>
+          <select id="us-states"></select>
+        </div>
+      </fieldset>
+    </form>
+
+    <script>
+    (function (async, $) {
+
+      function getUser(userID) {
+        return function (cb) {
+          $.get('/user/' + userID).then(function (user) {
+            cb(null, user);
+          }).fail(cb);
+        };
+      }
+
+      function getUSStates(cb) {
+        $.get('/us-states').then(function (states) {
+          cb(null, states);
+        }).fail(cb);
+      }
+
+      var userID = 1001;
+
+      async.parallel([
+        getUser(userID),
+        getUSStates
+      ], function (err, results) {
+        if (err) {
+          return alert(err.message);
+        }
+        var user = results[0],
+          states = results[1];
+        $('#first-name').val(user.firstName);
+        // ...
+        $('#us-states').append(states.map(function (state) {
+          return $('<option></option>')
+            .html(state)
+            .attr('value', state);
+        }));
+      });
+
+    }(window.async, window.jQuery));
+    </script>
+  </body>
+</html>

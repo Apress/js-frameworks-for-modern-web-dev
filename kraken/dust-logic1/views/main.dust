@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>App</title>
+    <link href="/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <h1>People</h1>
+
+    {#people}
+    <div class="person">
+
+        <table>
+            <tr><th>Name</th><td>{name}</td></tr>
+            <tr><th>Location</th><td>{location}</td></tr>
+            <tr><th>Age</th><td>{age}</td></tr>
+            <tr><th>Education</th><td>{education|humanize|titleize}</td></tr>
+            <tr><th>Job Title</th><td>{?job_title}{job_title}{:else}N/A{/job_title}</td></tr>
+        </table>
+
+        {@eq key=job_title value="Chef"}
+            <p>{name} is a chef. This person definitely knows how to cook.</p>
+            {:else}
+            <p>{name} is not a chef. This person may or may not know how to cook.</p>
+        {/eq}
+
+        {@gte key=age value=retirement_age}
+            <p>{name} has reached retirement age.</p>
+            {:else}
+                <p>
+                {@select key=job_title}
+                    {@eq value="Chef"}Probably went to culinary school, too.{/eq}
+                    {@eq value="Professor"}Smarty pants.{/eq}
+                    {@eq value="Accountant"}Good with numbers.{/eq}
+                    {@eq value="Astronaut"}Not afraid of heights.{/eq}
+                    {@eq value="Pilot"}Travels frequently.{/eq}
+                    {@eq value="Stunt Double"}Fearless.{/eq}
+                    {@none}Not sure what I think.{/none}
+                {/select}
+                </p>
+        {/gte}
+
+        {@lt key=age value=retirement_age}
+            <p>{name} will have reached retirement age in {@math key=retirement_age method="subtract" operand=age /} year(s).</p>
+        {/lt}
+
+        {@lt key=age value=retirement_age}
+            {@math key=retirement_age method="subtract" operand=age}
+                {@lte value=10}{name} will reach retirement age fairly soon.{/lte}
+                {@lte value=20}{name} has quite a ways to go before they can retire.{/lte}
+                {@default}{name} shouldn't even think about retiring.{/default}
+            {/math}
+        {/lt}
+
+        {@gte key=age value=20}
+            {@lte key=age value=29}<p>This person is in their 20's.</p>{/lte}
+        {/gte}
+
+        {@inRange key=age lower=20 upper=29}<p>This person is in their 20's.</p>{/inRange}
+
+    </div>
+    {/people}
+
+    <h2>Names</h2>
+
+    {#people}
+        {name}{@sep}, {/sep}
+    {/people}
+
+    <h2>Context Dumps</h2>
+
+    {#people}<pre>{@contextDump /}</pre>{/people}
+
+</body>
+</html>

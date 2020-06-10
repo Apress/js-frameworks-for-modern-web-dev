@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>App</title>
+    <link href="/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <h1>Cars</h1>
+    <ul>
+        {#cars}
+            <li>{.}</li>
+        {/cars}
+    </ul>
+    <h2>Trucks</h1>
+    <ul>
+        {#trucks}
+            <li>{.}</li>
+        {/trucks}
+    </ul>
+</body>
+</html>

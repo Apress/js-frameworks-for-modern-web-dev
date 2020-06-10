@@ -1,0 +1,21 @@
+{
+  "name": "simple",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "grunt"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "browserify": "^10.2.4",
+    "express": "^4.13.0",
+    "grunt": "^0.4.5",
+    "grunt-concurrent": "^2.0.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "open": "0.0.5",
+    "watchify": "^3.2.3"
+  }
+}

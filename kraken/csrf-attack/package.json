@@ -1,0 +1,28 @@
+{
+  "name": "csrf-attack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "adaro": "0.1.10",
+    "dustjs-helpers": "~1.6.3",
+    "dustjs-linkedin": "~2.6.0",
+    "body-parser": "^1.13.1",
+    "bookshelf": "^0.8.1",
+    "browserify": "^10.2.4",
+    "connect-session-knex": "^1.0.13",
+    "express": "^4.12.4",
+    "express-session": "^1.11.3",
+    "grunt": "^0.4.5",
+    "knex": "^0.8.6",
+    "sqlite3": "~3.0.8",
+    "bcrypt": "~0.8.3",
+    "bluebird": "~2.9.30"
+  }
+}

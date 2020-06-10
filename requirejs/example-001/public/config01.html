@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="UTF-8">
+    <title>Ponderings</title>
+    <link rel="stylesheet" type="text/css" href="/styles/app.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Ponderings</h1>
+    </header>
+    <section id="quotes"></section>
+    <script>
+    /*
+     * Will be automatically attached to the
+     * global window object as window.require.
+     */
+    var require = {
+      // configuration
+      baseUrl: '/scripts',
+      // kickoff
+      deps: ['quotes-view'],
+      callback: function (quotesList) {
+        quotesList.addQuote('Lorem ipsum dolor sit amet, consectetur adipiscing elit.');
+        quotesList.addQuote('Nunc non purus faucibus justo tristique porta.');
+      }
+    };
+    </script>
+    <script src="/scripts/require.js"></script>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="UTF-8">
+    <title>example-005/async-dowhilst</title>
+    <script src="/scripts/jquery.js"></script>
+    <script src="/scripts/async.js"></script>
+  </head>
+  <body>
+
+    <h1>Winners!</h1>
+    <ul id="winners"></ul>
+
+    <script>
+    (function (async, $) {
+
+      function pickWinners(howMany, cb) {
+        var winners = [];
+
+        async.doWhilst(
+          // looping code
+          function (cb) {
+            $.get('/employee/random').done(function (employee) {
+              var winner = employee.firstName + ' ' + employee.lastName;
+              // avoid potential duplicates
+              if (winners.indexOf(winner) < 0) {
+                winners.push(winner);
+              }
+              cb(null);
+            }).fail(function (err) {
+              cb(err);
+            });
+          },
+          // condition test is now the second function
+          // argument
+          function () { return winners.length < howMany; },
+          // final callback
+          function (err) {
+            // if there is an error just ignore it
+            // and pass back an empty array, otherwise
+            // pass the winners
+            cb(null, err ? [] : winners);
+          }
+        );
+      }
+
+      pickWinners(3, function (err, winners) {
+        $('ul#winners').append(winners.map(function (winner) {
+          return $('<li></li>').html(winner);
+        }));
+      });
+
+    }(window.async, window.jQuery));
+    </script>
+  </body>
+</html>

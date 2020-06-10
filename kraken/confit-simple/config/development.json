@@ -1,0 +1,16 @@
+{
+    "database": {
+        "postgresql": {
+            "hostname": "localhost",
+            "username": "postgres",
+            "password": "postgres",
+            "database": "myapp"
+        }
+    },
+    "cache": {
+        "redis": {
+            "hostname": "localhost",
+            "password": "redis"
+        }
+    }
+}

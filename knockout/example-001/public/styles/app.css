@@ -1,0 +1,120 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2em;
+}
+
+/* forms */
+
+form {
+    position: relative;
+}
+
+form label {
+    font-weight: bold;
+    padding: 0.2em;
+}
+
+.field-group {
+    display: block;
+    width: 100%;
+    max-width: 30em;
+    padding: 0 0 0.5em 0.5em;
+}
+
+.field-group input {
+    width: 100%;
+    font-size: 1em;
+    margin: 0.2em;
+}
+
+.field-group input[type=number] {
+    width: auto;
+}
+
+.field-group input.unit-field {
+    width: 3em;
+}
+
+.field-button-group {
+    width: 100%;
+    max-width: 30em;
+}
+
+.field-button-group input {
+    display: inline;
+    width: 85%;
+}
+
+.field-button-group .field-button {
+    float: right;
+    width: 10%;
+}
+
+form button {
+    font-size: 1em;
+    padding: 0.2em;
+}
+
+/* layout */
+
+header {
+    position: relative;
+}
+
+header h1 {
+    display: inline-block;
+    margin: 0.5em 0 1em 0.3em;
+    padding: 0;
+}
+
+header .happeh-left {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+header .happeh-right {
+    display: block;
+    position: absolute;
+    top: 3em;
+    left: 14em;
+}
+
+.content {
+    position: relative;
+    width: 100%;
+}
+
+#recipe-list {
+    float: left;
+    width: 20%;
+    background-color: coral;
+}
+
+#recipe-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#recipe-list li {
+    padding: 1em;
+}
+
+#recipe-list li:hover {
+    background-color: lightyellow;
+    cursor: pointer;
+}
+
+#recipe-list li.selected {
+    background-color: lightyellow;
+    font-weight: bold;
+}
+
+#recipe-details, #recipe-form {
+    float: left;
+    width: 75%;
+    padding: 1em;
+    background-color: #abfbb1;
+}

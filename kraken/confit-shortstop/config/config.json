@@ -1,0 +1,4 @@
+{
+    "app": "import:./app",
+    "something_else": "config:app.base_url"
+}

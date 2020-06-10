@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="UTF-8">
+    <title>example-017/views/defer.html</title>
+    <script src="/scripts/underscore.js"></script>
+    <script src="/scripts/jquery.js"></script>
+    <style>
+      table {table-layout: fixed;}
+      th {text-align: left;}
+      tr th:first-child,
+      tr th:nth-child(2),
+      tr th:nth-child(3),
+      tr th:nth-child(4) {
+        width: 10%;
+      }
+      tr th:nth-child(5) {
+        width: 50%
+      }
+    </style>
+  </head>
+  <body>
+
+    <p id="wait-msg">Please be patient while cards are loading!</p>
+    <table id="cards">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Expansion</th>
+          <th>Cost</th>
+          <th>Benefits</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <script>
+    $(function () {
+      var $waitMsg = $('#wait-msg');
+      var $cards = $('#cards tbody');
+
+      function processCards(cards) {
+        var BLOCK_SIZE = 10;
+
+        // process the first chunk of 10 cards
+        (function processBlock() {
+          if (!cards.length) {
+            $waitMsg.addClass('hidden');
+            return;
+          }
+
+          // take the first 10 cards from the array;
+          // splice() will reduce the length of the array
+          // by 10 each time
+          var block = cards.splice(0, BLOCK_SIZE);
+
+          _.forEach(block, function (card) {
+            var $tr = $('<tr></tr>');
+            $tr.append($('<td></td>').html(card.name));
+            $tr.append($('<td></td>').html(card.expansion));
+            $tr.append($('<td></td>').html(card.cost));
+            $tr.append($('<td></td>').html(card.benefits.join(', ')));
+            $tr.append($('<td></td>').html(card.description));
+            $cards.append($tr);
+          });
+
+          // defer the next block of 10 cards to
+          // allow the user to scroll and the UI to
+          // refresh
+          _.defer(processBlock);
+        }());
+
+      }
+
+      // kick off the process by loading the data set
+      $.get('/cards').then(processCards);
+    }());
+    </script>
+  </body>
+</html>

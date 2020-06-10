@@ -1,0 +1,8 @@
+$icon-font-path: "components/bootstrap-sass/assets/fonts/bootstrap/";
+@import "../components/bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
+@import "../components/bootstrap-sass/assets/stylesheets/bootstrap";
+
+body {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}

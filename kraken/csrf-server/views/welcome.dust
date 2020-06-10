@@ -1,0 +1,14 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">Welcome, {user.first_name}.</h3>
+    </div>
+    <div class="panel-body">
+        <ul>
+            <li>First Name: {user.first_name}</li>
+            <li>Last Name: {user.last_name}</li>
+            <li>Email Address: {user.email}</li>
+            <li>Created At: {user.created_at}</li>
+            <li><a href="/logout">Logout</a></li>
+        </ul>
+    </div>
+</div>

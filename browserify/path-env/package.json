@@ -1,0 +1,14 @@
+{
+  "name": "path-env",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./bin/index.js",
+  "scripts": {
+    "start": "npm install && export NODE_PATH=$NODE_PATH:./lib && node ./bin/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.1"
+  }
+}

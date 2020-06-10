@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="UTF-8">
+    <title>example-006/async-until</title>
+    <script src="/scripts/jquery.js"></script>
+    <script src="/scripts/async.js"></script>
+  </head>
+  <body>
+
+    <section id="output"></section>
+
+    <script>
+    (function (async, $) {
+
+      var output = document.querySelector('#output');
+
+      function write() {
+        var pre = document.createElement('pre');
+        pre.innerHTML = Array.prototype.join.call(arguments, ' ');
+        output.appendChild(pre);
+      }
+
+      function Heartbeat(url, interval) {
+        var self = this;
+        this.isAvailable = false;
+        this.isStopped = false;
+        this.writeStatus = function () {
+          write(
+            '> heartbeat [isAvailable: %s, isStopped: %s]'
+              .replace('%s', self.isAvailable)
+              .replace('%s', self.isStopped)
+          );
+        };
+
+        async.until(
+          // test condition
+          function () { return self.isStopped; },
+          // loop
+          function (cb) {
+            $.get(url).then(function () {
+              self.isAvailable = true;
+            }).fail(function () {
+              self.isAvailable = false;
+            }).always(function () {
+              self.writeStatus();
+              // delay the next loop by scheduling
+              // the callback invocation in the
+              // future
+              setTimeout(function () {
+                cb(null);
+              }, interval);
+            });
+          },
+          // final callback
+          function (/*err*/) {
+            self.isAvailable = false;
+            self.writeStatus();
+          }
+        );
+      }
+
+      Heartbeat.prototype.stop = function () {
+        this.isStopped = true;
+      };
+
+      var heartbeat = new Heartbeat('/heartbeat', 3000);
+
+      setTimeout(function () {
+        // 10 seconds later
+        heartbeat.stop();
+      }, 10000);
+
+    }(window.async, window.jQuery));
+    </script>
+  </body>
+</html>

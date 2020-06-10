@@ -1,0 +1,136 @@
+[
+  {
+    "id": 1,
+    "title": "Stuffed baby bella mushroom caps",
+    "ingredients": [
+      "20 baby bella mushroom caps",
+      "1/2 small onion (white or yellow)",
+      "1 roma/plum tomato",
+      "1 cup spinach",
+      "2 cloves garlic",
+      "3 tablespoons of balsamic vinegar",
+      "2.5 tablespoons of olive oil",
+      "2 teaspoons of thyme",
+      "2 teaspoons of rosemary (or basil, or both)",
+      "dash of salt and pepper"
+    ],
+    "instructions": [
+      "Preheat the oven to 350 degrees. Dice up onions, spinach, and garlic into tiny pieces. Sautee the garlic and onions in 1/2 tablespoon of olive oil for 5 minutes, add the spinach and cook for another minute or two. Side aside.",
+      "Using a small knife, take your baby bella mushroom caps and cut off the stem and scoop part of the center to create bowl shapes.",
+      "Create a sauce with 2 tablespoons of olive oil, balsamic vinegar, and herbs. Dip your mushroom caps into the sauce and place on a foil-lined cooking sheet.",
+      "Dice tomatoes into pieces. Add to the onion and spinach and mix well. With your hands or small spoon, stuff each mushroom bowl with the diced veggies. Use any excess balsamic sauce to drizzle on top. Sprinkle salt and pepper, if desired, over the tops of the appetizers before cooking.",
+      "Cook for about 15-18 minutes at 350 degrees. Serve and have fun eating these little bites!"
+    ],
+    "cookingTime": {
+      "hours": 0,
+      "minutes": 18
+    },
+    "serves": 2,
+    "citation": "http://thehealthybeast.com/2013/08/29/mini-balsamic-mushroom-caps-all-veggie/"
+  },
+  {
+    "id": 2,
+    "title": "Roasted Beets with Balsamic Glaze",
+    "ingredients": [
+      "6 medium beets (3-4 inches)",
+      "2 tablespoon(s) olive oil",
+      "1/4 teaspoon(s) sea salt, (optional)",
+      "1/4 teaspoon(s) black pepper, freshly ground",
+      "1/2 cup(s) balsamic vinegar",
+      "2 teaspoon(s) maple syrup, (Grade B recommended)",
+      "1 teaspoon(s) orange zest"
+    ],
+    "instructions": [
+      "Preheat oven to 325 F.",
+      "Wash beets and slice into quarters. Cut each quarter into 1/4 inch slices.",
+      "Put beets on baking sheet. Add olive oil, sea salt and pepper and mix together completely. Spread beets out again on baking sheet.",
+      "Roast for 25 to 45 minutes, checking often. Remove from oven when slightly tender.",
+      "Meanwhile, combine vinegar and maple syrup in a small pan over high heat. Cook until vinegar has reduced to a syrup-like consistency, stirring often. Remove from heat.",
+      "When beets are fully cooked, pour glaze over top and sprinkle with freshly grated orange zest."
+    ],
+    "cookingTime": {
+      "hours": 1,
+      "minutes": 0
+    },
+    "serves": 4,
+    "citation": "http://www.paleoplan.com/2011/06-09/roasted-beets-with-balsamic-glaze/"
+  },
+  {
+    "id": 3,
+    "title": "Honey Dill Carrots",
+    "ingredients": [
+      "1 pound(s) carrots, baby",
+      "1 tablespoon(s) coconut oil",
+      "1 tablespoon(s) honey, raw",
+      "2 sprig(s) dill, fresh, chopped (or 1 tablespoon dried dill)"
+    ],
+    "instructions": [
+      "Heat 1.5 inches water in a medium pot with steamer basket over high heat until water boils.",
+      "Add carrots to steamer basket and cover. Steam for 20-30 minutes, or until tender.",
+      "Remove from basket and add coconut oil. Drizzle with honey, sprinkle with dill, and toss to coat. Serve warm."
+    ],
+    "cookingTime": {
+      "hours": 0,
+      "minutes": 30
+    },
+    "serves": 4,
+    "citation": "http://www.paleoplan.com/2009/12-12/honey-dill-carrots/"
+  },
+  {
+    "id": 4,
+    "title": "Honey & Spice Chicken Drumsticks",
+    "ingredients": [
+      "1/4 cup Sriracha homemade or paleo approved",
+      "1/2 cup raw honey",
+      "1 teaspoon crushed garlic",
+      "1 tablespoon turmeric",
+      "1 teaspoon cinnamon",
+      "1 tablespoon coconut oil",
+      "1 tablespoon Coconut Aminos",
+      "6 free range, organic chicken legs",
+      "salt and pepper, to taste",
+      "1 green onion, sliced, green parts only, for garnish"
+    ],
+    "instructions": [
+      "Mix together first seven ingredients in large bowl.",
+      "Place chicken legs in bowl and toss to coat with sauce.",
+      "Once all chicken legs are thoroughly coated, place in fridge to marinate for 20 minutes.",
+      "Preheat oven to 400° F.",
+      "Remove chicken legs from marinade and place on baking sheet, lined with parchment paper.",
+      "Bake for 40 to 45 minutes,or until internal temperature of chicken reaches 165° F.",
+      "Remove from oven.",
+      "Plate and sprinkle with green onion."
+    ],
+    "cookingTime": {
+      "hours": 1,
+      "minutes": 5
+    },
+    "serves": 2,
+    "citation": "http://www.paleocajunlady.com/honey-spice-chicken-drumsticks-recipe-with-aip-option/"
+  },
+  {
+    "id": 5,
+    "title": "Slow Cooked Pork Spare Ribs",
+    "ingredients": [
+      "3 lbs pork spare ribs",
+      "5 tbsp homemade ketchup",
+      "3/4 cup water or homemade stock",
+      "2 tbsp apple cider vinegar",
+      "2 tbsp Worcestershire sauce, optional",
+      "1 tsp mustard powder",
+      "Sea salt and freshly ground black pepper to taste"
+    ],
+    "instructions": [
+      "It's really quite easy to get this recipe started. In the slow-cooker pot, combine all the ingredients except for the ribs.",
+      "Give it a real good mix, because when you cook this way, you don’t have to stop and stir; therefore you want to make sure the sauce is consistent and you don’t get flavors in one bite that you won’t get in another.",
+      "Once everything is combined, give the ribs a good rub with the sauce, place them in the pot, cover and cook on low heat for 8 hours. The cooking time may be long, but the reward is well worth it.",
+      "Serve the ribs with the cooking liquid as a sauce."
+    ],
+    "cookingTime": {
+      "hours": 0,
+      "minutes": 0
+    },
+    "serves": 4,
+    "citation": "http://paleoleap.com/slow-cooked-pork-spare-ribs/"
+  }
+]

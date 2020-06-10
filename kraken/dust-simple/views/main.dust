@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>App</title>
+    <link href="/css/style.css" rel="stylesheet">
+</head>
+<body>
+    {! Dust comments are created using this format. Data is referenced by wrapping the
+    desired key within a single pair of curly brackets, as shown below. !}
+    <h1>{report_name}</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Population</th>
+                <th>Speaks English</th>
+                <th>Capital</th>
+                <th>Population of Capital</th>
+            </tr>
+        </thead>
+        <tbody>
+            {! Templates can loop through iterable objects !}
+            {#countries}
+            <tr>
+                <td>{name}</td>
+                <td>{population}</td>
+                <td>{?english}Yes{:else}No{/english}</td>
+                {#capital}
+                    <td>{name}</td>
+                    <td>{population}</td>
+                {/capital}
+            </tr>
+            {/countries}
+        </tbody>
+    </table>
+    <h2>Languages</h2>
+    <ul>
+        {#languages}
+        <li>{.}</li>
+        {/languages}
+    </ul>
+    <h2>Total Population: {misc.total_population}</h2>
+</body>
+</html>

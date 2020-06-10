@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>App</title>
+    <link href="/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <h1>System Status: {systemStatus}</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Server</th>
+                <th>Online</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            {#servers}
+                <tr>
+                    <td>{name}</td>
+                    <td>{isOnline}</td>
+                    <td>
+                        {#description}
+                            {:web}
+                                A web server serves content over HTTP.
+                            {:database}
+                                A database server fetches remotely stored information.
+                            {:email}
+                                An email server sends and receives messages.
+                            {:else}
+                            -
+                        {/description}
+                    </td>
+                </tr>
+            {/servers}
+        </tbody>
+    </table>
+</body>
+</html>

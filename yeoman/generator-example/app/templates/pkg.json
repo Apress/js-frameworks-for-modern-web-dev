@@ -1,0 +1,16 @@
+{
+  "name": "<%= package_name %>",
+  "description": "<%= description %>",
+  "author": "<%= author %>",
+  "files": [],
+  "keywords": [],
+  "dependencies": {},
+  "browserify": {
+    "transform": [
+      "brfs",
+      "bulkify",
+      "folderify"
+    ]
+  },
+  "browser": {}
+}

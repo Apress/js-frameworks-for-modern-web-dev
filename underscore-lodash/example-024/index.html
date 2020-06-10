@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="UTF-8">
+    <title>example-024/index.html</title>
+    <script src="../node_modules/underscore/underscore.js"></script>
+  </head>
+  <body>
+
+    <div id="output"></div>
+
+    <script>
+    (function (_) {
+      var markup =
+        '<%- voted %> out of <%- total %> stars!' +
+        '<% if (obj.percent) { %>' +
+        ' (<%- obj.percent %>%)' +
+        '<% } else { %>' +
+        ' (<% print((voted / total * 100).toFixed(0)) %>%)' +
+        '<% } %>';
+
+      var compiledTemplate = _.template(markup);
+
+      var rendered = compiledTemplate({
+        voted: 4, total: 5, percent: 80.2
+      });
+
+      document.querySelector('#output').innerHTML = rendered;
+
+    }(window._));
+    </script>
+
+  </body>
+</html>

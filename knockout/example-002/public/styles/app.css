@@ -1,0 +1,115 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2em;
+}
+
+/* forms */
+
+input[type=text],
+input[type=number],
+button,
+select,
+label {
+    font-size: 1rem;
+}
+
+input[type=text] {
+    width: 30rem;
+}
+
+input[type=number] {
+    width: 3rem;
+}
+
+button {
+    margin: 0 0.2rem;
+}
+
+.edit-field {
+    margin: 0.5rem 0;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+}
+
+/* layout */
+
+header {
+    position: relative;
+}
+
+header h1 {
+    display: inline-block;
+    margin: 0.5em 0 1em 0.3em;
+    padding: 0;
+}
+
+header .happeh-left {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+header .happeh-right {
+    display: block;
+    position: absolute;
+    top: 3em;
+    left: 14em;
+}
+
+.content {
+    position: relative;
+    width: 100%;
+}
+
+#recipe-list {
+    float: left;
+    width: 20%;
+    background-color: coral;
+}
+
+#recipe-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#recipe-list li {
+    padding: 1em;
+}
+
+#recipe-list li:hover {
+    background-color: lightyellow;
+    cursor: pointer;
+}
+
+#recipe-list li.selected {
+    background-color: lightyellow;
+    font-weight: bold;
+}
+
+#recipe-details, #recipe-form {
+    float: left;
+    width: 75%;
+    padding: 1em;
+    background-color: #abfbb1;
+}
+
+.listless {
+    list-style: none;
+    padding: 0;
+}
+
+.attribution {
+    font-size: 0.7rem;
+    margin: 1rem;
+}
+
+footer {
+    float: left;
+    width: 100%;
+    text-align: center;
+}

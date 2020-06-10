@@ -1,0 +1,24 @@
+{
+    "middleware": {
+        "morgan": {
+            "enabled": true,
+            "priority": 10,
+            "module": {
+                "name": "morgan",
+                "arguments": ["combined"]
+            }
+        },
+        "enrouten": {
+            "enabled": true,
+            "priority": 30,
+            "module": {
+                "name": "express-enrouten",
+                "arguments": [
+                    {
+                        "index": "path:../routes/index"
+                    }
+                ]
+            }
+        }
+    }
+}

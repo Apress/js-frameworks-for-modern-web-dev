@@ -1,0 +1,8 @@
+{
+  "name": "mongoose-examples",
+  "version": "1.0.0",
+  "author": "Nicholas Cloud",
+  "dependencies": {
+    "mongoose": "^4.0.1"
+  }
+}

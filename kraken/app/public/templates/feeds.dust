@@ -1,0 +1,22 @@
+{>"layouts/master" /}
+
+{<body}
+
+    <div class="panel panel-default">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Feed</th>
+                </tr>
+            </thead>
+            <tbody>
+                {#feeds}
+                    <tr>
+                        <td>{name}</td>
+                    </tr>
+                {/feeds}
+            </tbody>
+        </table>
+    </div>
+
+{/body}

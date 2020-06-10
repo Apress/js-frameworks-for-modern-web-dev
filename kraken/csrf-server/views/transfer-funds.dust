@@ -1,0 +1,8 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">Transfer Funds</h3>
+    </div>
+    <div class="panel-body">
+        <p>No problem, {user.first_name}. We have transfered all of the funds out of your account.</p>
+    </div>
+</div>

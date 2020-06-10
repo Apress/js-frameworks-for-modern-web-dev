@@ -1,0 +1,25 @@
+{
+    "name": "app",
+    "pwd": "/Users/tim/repos/pro-javascript-frameworks/code/pm2/app",
+    "args": [],
+    "script": "index.js",
+    "node_args": [],
+    "log_date_format": "YYYY-MM-DD HH:mm Z",
+    "error_file": "",
+    "out_file": "",
+    "pid_file": "",
+    "instances": 1,
+    "min_uptime": "100s",
+    "max_restarts": 5,
+    "max_memory_restart": "100M",
+    "cron_restart": "1 0 * * *",
+    "watch": false,
+    "ignore_watch": [],
+    "merge_logs": false,
+    "exec_interpreter": "node",
+    "exec_mode": "fork",
+    "autorestart": true,
+    "vizion": false,
+    "env": {
+    }
+}

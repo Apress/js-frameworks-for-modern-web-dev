@@ -1,0 +1,12 @@
+{{#each this as |quotes attribution|}}
+<section class="multiquote">
+  <h2 class="attribution">{{attribution}}</h2>
+  {{#each quotes}}
+  <blockquote class="quote">
+  {{#explode text delim="\n"}}
+    <p>{{this}}</p>
+  {{/explode}}
+  </blockquote>
+  {{/each}}
+</section>
+{{/each}}

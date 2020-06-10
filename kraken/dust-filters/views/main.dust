@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>App</title>
+    <link href="/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <h1>Important Events</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Event</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {#events}
+            <tr>
+                <td>{label}</td>
+                <td>{ts|formatTS}</td>
+            </tr>
+            {/events}
+        </tbody>
+    </table>
+</body>
+</html>

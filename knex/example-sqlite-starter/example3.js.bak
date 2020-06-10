@@ -1,0 +1,12 @@
+'use strict';
+
+var knex = require('./lib/db');
+var Writable = require('stream').Writable;
+
+var ws = Writable();
+ws._write = function(chunk, enc, next) {
+    console.dir(chunk);
+    next();
+};
+var stream = knex.select('*').from('users').stream();
+stream.pipe(ws);

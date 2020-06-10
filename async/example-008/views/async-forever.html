@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="UTF-8">
+    <title>example-008/async-forever</title>
+    <script src="/scripts/jquery.js"></script>
+    <script src="/scripts/async.js"></script>
+  </head>
+  <body>
+
+    <ul id="stocks"></ul>
+
+    <script>
+    (function (async, $) {
+      $stockList = $('ul#stocks');
+
+      async.forever(function (cb) {
+        $.get('/dashboard/stocks')
+          .done(function (stocks) {
+            // refresh the stock list with new stock
+            // information
+            $stockList.empty();
+            $stockList.append(stocks.map(function (stock) {
+              return $('<li></li>').html(stock.symbol + ' $' + stock.price);
+            }));
+            // wait three seconds before continuing
+            setTimeout(function () {
+              cb(null);
+            }, 3000);
+          }).fail(cb);
+      }, function (err) {
+        console.error(err.responseText);
+      })
+    }(window.async, window.jQuery));
+    </script>
+  </body>
+</html>

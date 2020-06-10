@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="UTF-8">
+    <title>example-019/throttle.html</title>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/underscore/underscore.js"></script>
+    <script src="postal.js"></script>
+  </head>
+  <body>
+
+    <section id="friends"></section>
+
+    <script>
+    $(function () {
+
+      var $friends = $('#friends');
+
+      function onStatusUpdate(data) {
+        var text = data.name + ' is ' + data.status;
+        $friends.append($('<p></p>').html(text));
+      }
+
+      /*
+       * subscribing to status updates from friends
+       * with a throttled callback that will only
+       * fire *once* every 500ms
+       */
+      postal.subscribe({
+        channel: 'friends',
+        topic: 'status.update',
+        callback: _.throttle(onStatusUpdate, 500)
+      });
+
+    }());
+    </script>
+
+    <script>
+    $(function () {
+      var i = 1;
+      var interval = null;
+
+      /*
+       * publishing a status update from a
+       * friend every 100ms
+       */
+      function sendMessage() {
+        if (i === 100) {
+          return clearInterval(interval);
+        }
+        i += 1;
+        postal.publish({
+          channel: 'friends',
+          topic: 'status.update',
+          data: {
+            name: 'Jim',
+            status: 'slinging code'
+          }
+        });
+      }
+
+      setInterval(sendMessage, 100);
+    }());
+    </script>
+
+  </body>
+</html>

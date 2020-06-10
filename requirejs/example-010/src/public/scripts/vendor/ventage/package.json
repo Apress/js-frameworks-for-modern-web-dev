@@ -1,0 +1,27 @@
+{
+  "name": "ventage",
+  "version": "2.0.2",
+  "homepage": "https://github.com/nicholascloud/ventage",
+  "description": "Ventage is a simple eventing library for JavaScript objects.",
+  "keywords": ["events", "eventing"],
+  "license": "LICENSE",
+  "authors": ["Nicholas Cloud <me@nicholascloud.com>"],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nicholascloud/ventage.git"
+  },
+  "main": "ventage.js",
+  "ignore": ["./test"],
+  "scripts": {
+    "test": "open test/index.html"
+  },
+  "bugs": {
+    "url": "https://github.com/nicholascloud/ventage/issues"
+  },
+  "ignore": [
+    "_tmp/",
+    ".jshintrc",
+    ".jshintignore",
+    "test/"
+  ]
+}

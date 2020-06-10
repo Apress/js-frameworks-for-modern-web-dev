@@ -1,0 +1,13 @@
+{
+    "name": "graceful",
+    "cwd": "/Users/tim/repos/pro-javascript-frameworks/code/pm2/graceful",
+    "max_memory_restart": "60M",
+    "watch": false,
+    "script": "index.js",
+    "exec_mode": "fork",
+    "autorestart": true,
+    "merge_logs": false,
+    "env": {
+        "port": 9000
+    }
+}

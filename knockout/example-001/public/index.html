@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Omnom Recipes</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link type="text/css" rel="stylesheet" href="/styles/app.css" />
+  </head>
+  <body>
+
+    <header>
+      <h1>Omnom Recipes</h1>
+      <span class="happeh-left">(❀◦‿◦)</span>
+      <span class="happeh-right">(◕‿◕✿)</span>
+    </header>
+
+    <section class="content">
+      <nav id="recipe-list">
+        <!-- context: viewmodel -->
+        <!-- $parent === undefined -->
+        <!-- $data === viewmodel -->
+        <ul data-bind="foreach: recipes">
+          <!-- context: recipe -->
+          <!-- $parent === viewmodel -->
+          <!-- $data === recipe -->
+          <li data-bind="text: title,
+            click: $parent.selectRecipe.bind($parent),
+            css: {selected: $parent.isSelected($data)}"></li>
+        </ul>
+      </nav>
+
+      <section id="recipe-details">
+        <h1 data-bind="text: title"></h1>
+
+        <h2>Details</h2>
+        <p>Servings: <span data-bind="text: servings"></span></p>
+        <p>Approximate Cook Time: <span data-bind="text: cookingTime"></span></p>
+
+        <h2>Ingredients</h2>
+
+        <ul data-bind="foreach: ingredients">
+          <li data-bind="text: $data"></li>
+        </ul>
+
+        <h2>Instructions</h2>
+
+        <ol data-bind="foreach: instructions">
+          <li data-bind="text: $data"></li>
+        </ol>
+
+        <a data-bind="visible: hasCitation(),
+          attr: {href: citation, title: title}"
+          target="_blank">Source</a>
+
+      </section>
+    </section>
+
+    <script src="/scripts/vendor/jquery-2.1.3.min.js"></script>
+    <script src="/scripts/vendor/knockout-3.3.0.js"></script>
+    <script src="/scripts/recipe-list.js"></script>
+    <script src="/scripts/recipe-details.js"></script>
+    <script src="/scripts/app.js"></script>
+  </body>
+</html>

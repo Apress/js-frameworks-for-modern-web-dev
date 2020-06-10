@@ -1,0 +1,14 @@
+{
+    "retirement_age": 65,
+    "people": [
+        { "name": "Joe", "location": "Chicago", "age": 27, "education": "high_school", "employed": false, "job_title": null },
+        { "name": "Mary", "location": "Denver", "age": 35, "education": "college", "employed": true, "job_title": "Chef" },
+        { "name": "Wilson", "location": "San Francisco", "age": 37, "education": "college", "employed": false, "job_title": null },
+        { "name": "Steve", "location": "Oahu", "age": 42, "education": "masters", "employed": true, "job_title": "Professor" },
+        { "name": "Laura", "location": "Nashville", "age": 56, "education": "college", "employed": true, "job_title": "Accountant" },
+        { "name": "Tim", "location": "Portland", "age": 38, "education": "college", "employed": true, "job_title": "Astronaut" },
+        { "name": "Katie", "location": "Las Vegas", "age": 26, "education": "college", "employed": true, "job_title": "Stunt Double" },
+        { "name": "Craig", "location": "Austin", "age": 49, "education": "masters", "employed": true, "job_title": "Pilot" },
+        { "name": "Ryan", "location": "Orland", "age": 72, "education": "college", "employed": false, "job_title": null }
+    ]
+}

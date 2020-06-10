@@ -1,0 +1,15 @@
+{
+  "name": "browser2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./lib/node.js",
+  "browser": {
+    "./lib/node.js": "./lib/browser.js",
+    "./lib/extra.js": "./lib/extra-browser.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

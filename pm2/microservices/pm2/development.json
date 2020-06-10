@@ -1,0 +1,24 @@
+[
+    {
+        "name"              : "main",
+        "cwd"               : "/Users/tim/repos/pro-javascript-frameworks/code/pm2/microservices",
+        "script"            : "main/index.js",
+        "max_memory_restart": "60M",
+        "watch"             : true,
+        "env": {
+            "NODE_ENV": "development",
+            "WEATHER_API_URL": "http://localhost:7010"
+        }
+    },
+    {
+        "name"              : "weather-api",
+        "cwd"               : "/Users/tim/repos/pro-javascript-frameworks/code/pm2/microservices",
+        "script"            : "weather/index.js",
+        "max_memory_restart": "60M",
+        "watch"             : true,
+        "env": {
+            "NODE_ENV": "development",
+            "PORT": 7010
+        }
+    }
+]

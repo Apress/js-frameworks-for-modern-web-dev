@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Browserify - Advanced Example</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="container">
+
+    <navbar ng-if="user_id"></navbar>
+
+    <div ng-view></div>
+
+    <footer><a href="/disc.html">View this project's dependency tree</a></footer>
+
+    <script src="/dist/vendor.js"></script>
+    <script src="/dist/app.js"></script>
+
+</body>
+</html>

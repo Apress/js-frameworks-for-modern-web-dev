@@ -1,0 +1,8 @@
+{
+  "name": "async-examples",
+  "version": "1.0.0",
+  "author": "Nicholas Cloud",
+  "dependencies": {
+    "async": "^0.9.0"
+  }
+}

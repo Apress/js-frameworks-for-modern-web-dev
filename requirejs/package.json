@@ -1,0 +1,9 @@
+{
+  "name": "requirejs-examples",
+  "version": "1.0.0",
+  "author": "Nicholas Cloud",
+  "dependencies": {
+    "mach": "^1.3.5",
+    "requirejs": "^2.1.17"
+  }
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="UTF-8">
+    <title>example-021/index.html</title>
+    <script src="../node_modules/underscore/underscore.js"></script>
+  </head>
+  <body>
+
+    <div id="output"></div>
+
+    <script>
+    (function (_) {
+      var markup =
+        '<h1><%- title %></h1>' +
+        '<p class="synopsis"><%- synopsis %></p>' +
+        '<ul>' +
+        '<% _.each(actors, function (actor) { %>' +
+        '  <li><%- actor %></li>' +
+        '<% }); %>' +
+        '</ul>';
+
+      // compile the string into a function
+      var compiledTemplate = _.template(markup);
+
+      // invoke the function with data to
+      // get the rendered string
+      var rendered = compiledTemplate({
+        title: 'Sunshine',
+        synopsis: 'A team of scientists are sent to re-ignite a dying sun.',
+        actors: ['Cillian Murphy', 'Hiroyuki Sanada', 'Chris Evans']
+      });
+
+      document.querySelector('#output').innerHTML = rendered;
+
+    }(window._));
+    </script>
+
+  </body>
+</html>

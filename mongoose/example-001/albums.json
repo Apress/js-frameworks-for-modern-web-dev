@@ -1,0 +1,80 @@
+[
+  {
+    "composer": "Kerry Muzzey",
+    "title": "Renaissance",
+    "price": 4.95,
+    "releaseDate": "2014-01-13T06:00:00.000Z",
+    "inPublication": true,
+    "genre": ["Classical", "Trailer Music", "Soundtrack"],
+    "tracks": [
+      {"title": "The Looking Glass", "duration": {"m": 3, "s": 20}},
+      {"title": "Renaissance", "duration": {"m": 2, "s": 45}},
+      {"title": "Fall from Grace", "duration": {"m": 3, "s": 40}},
+      {"title": "Fall from Grace (Choir Version)", "duration": {"m": 3, "s": 40}},
+      {"title": "Deadtown Rebuilt", "duration": {"m": 4, "s": 11}}
+    ]
+  },
+  {
+    "composer": "Audiomachine",
+    "title": "Tree of Life",
+    "price": 9.49,
+    "releaseDate": "2013-07-16T05:00:00.000Z",
+    "inPublication": true,
+    "genre": ["Classical", "Trailer Music"],
+    "tracks": [
+      {"title": "Above and Beyond", "duration": {"m": 2, "s": 53}},
+      {"title": "Tree of Life", "duration": {"m": 2, "s": 3}},
+      {"title": "An Unfinished Life", "duration": {"m": 2, "s": 5}},
+      {"title": "Breaking Through", "duration": {"m": 1, "s": 21}},
+      {"title": "Equinox", "duration": {"m": 2, "s": 27}},
+      {"title": "The Fire Within", "duration": {"m": 2, "s": 27}},
+      {"title": "Life Chronicles", "duration": {"m": 2, "s": 27}},
+      {"title": "Solstice Sun", "duration": {"m": 2, "s": 20}},
+      {"title": "The Truth", "duration": {"m": 3, "s": 24}},
+      {"title": "Homecoming", "duration": {"m": 3, "s": 14}},
+      {"title": "Apotheosis", "duration": {"m": 2, "s": 47}},
+      {"title": "Turning Point", "duration": {"m": 2, "s": 54}},
+      {"title": "Rebirth", "duration": {"m": 2, "s": 18}},
+      {"title": "Age of Innocence", "duration": {"m": 2, "s": 30}},
+      {"title": "Hallowed Dawn", "duration": {"m": 1, "s": 59}},
+      {"title": "Hope and Glory", "duration": {"m": 2, "s": 10}},
+      {"title": "The New World", "duration": {"m": 2, "s": 3}},
+      {"title": "Ashes to Ashes", "duration": {"m": 1, "s": 41}},
+      {"title": "Cry Freedom", "duration": {"m": 2, "s": 35}},
+      {"title": "Day One", "duration": {"m": 2, "s": 5}},
+      {"title": "The Great Unknown", "duration": {"m": 1, "s": 54}},
+      {"title": "Remember the Titans", "duration": {"m": 2, "s": 18}},
+      {"title": "Across the Horizon", "duration": {"m": 2, "s": 25}},
+      {"title": "The Legend Begins", "duration": {"m": 2, "s": 20}},
+      {"title": "Leaving the Nest", "duration": {"m": 2, "s": 13}},
+      {"title": "Final Hope", "duration": {"m": 2, "s": 36}}
+    ]
+  },
+  {
+    "composer": "Jessica Curry",
+    "title": "Dear Esther",
+    "price": 6.99,
+    "releaseDate": "2012-02-14T06:00:00.000Z",
+    "inPublication": true,
+    "genre": ["Classical", "Video Game Soundtrack"],
+    "tracks": [
+      {"title": "Dear Esther", "duration": {"m": 1, "s": 13}},
+      {"title": "I Have Begun My Ascent", "duration": {"m": 4, "s": 19}},
+      {"title": "Remember (Donnelly)", "duration": {"m": 0, "s": 37}},
+      {"title": "Twenty One", "duration": {"m": 2, "s": 52}},
+      {"title": "Golden Ratio", "duration": {"m": 2, "s": 8}},
+      {"title": "Remember (Paul)", "duration": {"m": 0, "s": 37}},
+      {"title": "On the Motorway", "duration": {"m": 2, "s": 0}},
+      {"title": "Standing Stones", "duration": {"m": 2, "s": 8}},
+      {"title": "Always (Hebridean mix)", "duration": {"m": 9, "s": 4}},
+      {"title": "The Bones of Jakobson", "duration": {"m": 3, "s": 42}},
+      {"title": "Remember (Jakobson)", "duration": {"m": 0, "s": 48}},
+      {"title": "This Godforsaken Aerial", "duration": {"m": 3, "s": 26}},
+      {"title": "Moon in my Palm", "duration": {"m": 2, "s": 42}},
+      {"title": "Remember (Esther)", "duration": {"m": 0, "s": 36}},
+      {"title": "Always (Sanford Mix)", "duration": {"m": 7, "s": 15}},
+      {"title": "The Very Air", "duration": {"m": 1, "s": 17}},
+      {"title": "Ascension", "duration": {"m": 3, "s": 0}}
+    ]
+  }
+]

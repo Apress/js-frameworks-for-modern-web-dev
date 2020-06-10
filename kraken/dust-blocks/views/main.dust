@@ -1,0 +1,5 @@
+{>"shared/base"/}
+
+{<bodyContent}
+    <p>Hello, world!</p>
+{/bodyContent}

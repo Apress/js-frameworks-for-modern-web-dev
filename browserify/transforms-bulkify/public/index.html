@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Browserify - Transforms Example (bulkify)</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="container">
+    <div class="row">
+        <div class="col-xs-3">
+            <div class="list-group">
+                <a class="list-group-item" ng-class="{ active: currentPath === '/dashboard' }" href="#/dashboard">Dashboard</a>
+                <a class="list-group-item" ng-class="{ active: currentPath === '/animals' }" href="#/animals">Animals</a>
+                <a class="list-group-item" ng-class="{ active: currentPath === '/settings' }" href="#/settings">Settings</a>
+            </div>
+        </div>
+        <div class="col-xs-9" ng-view></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="/dist/app.js"></script>
+</body>
+</html>

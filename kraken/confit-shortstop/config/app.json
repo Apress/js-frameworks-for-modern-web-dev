@@ -1,0 +1,8 @@
+{
+    // The title of the application
+    "title": "My Demo Application",
+    // The base URL at which the web client can be reached
+    "base_url": "https://myapp.com",
+    // The base URL at which the API can be reached
+    "base_api_url": "https://api.myapp.com"
+}

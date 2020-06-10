@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="UTF-8">
+    <title>example-018/debounce.html</title>
+    <script src="../node_modules/underscore/underscore.js"></script>
+  </head>
+  <body>
+
+    <button id="submit">Quickly Click Me Many Times!</button>
+    <script>
+    (function () {
+      var onClick = _.debounce(function (e) {
+        alert('click handled!');
+      }, 300);
+
+      document.getElementById('submit')
+        .addEventListener('click', onClick);
+    }());
+    </script>
+
+  </body>
+</html>

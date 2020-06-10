@@ -1,0 +1,25 @@
+{
+  "name": "grunt-release-name-generator",
+  "version": "1.0.2",
+  "description": "Grunt plugin that generates unique release names, Ubuntu-style (e.g. Distant Dragon, Wobbly Wren, etc...)",
+  "dependencies": {
+    "lodash": "^2.4.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tkambler/grunt-release-name-generator"
+  },
+  "keywords": [
+    "gruntplugin"
+  ],
+  "author": "Tim Ambler <tkambler@gmail.com> (http://bitcubby.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tkambler/grunt-release-name-generator/issues"
+  },
+  "homepage": "https://github.com/tkambler/grunt-release-name-generator"
+}
