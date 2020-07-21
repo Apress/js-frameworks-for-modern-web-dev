@@ -35,7 +35,7 @@
     "jquery": "^2.1.4",
     "jquery.cookie": "^1.4.1",
     "knex": "^0.8.6",
-    "lodash": "^3.9.3",
+    "lodash": "^4.17.19",
     "lodash-deep": "^1.6.0",
     "moment": "^2.10.3",
     "morgan": "^1.6.0",
