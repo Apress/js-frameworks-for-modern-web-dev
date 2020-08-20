@@ -13,7 +13,7 @@
     "angular": "^1.4.1",
     "angular-route": "^1.4.1",
     "angular-sanitize": "^1.4.1",
-    "bcrypt": "^0.8.3",
+    "bcrypt": "^5.0.0",
     "bluebird": "^2.9.30",
     "body-parser": "^1.13.1",
     "bookshelf": "^0.8.1",
